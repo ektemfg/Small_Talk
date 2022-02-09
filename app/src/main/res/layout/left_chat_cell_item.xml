@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/left_chat_bubble_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/left_chat_bubble_image_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_small"
+        app:cardCornerRadius="1000dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/left_chat_bubble_name">
+
+        <ImageView
+
+            android:id="@+id/left_chat_bubble_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/doggy" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/left_chat_bubble_message_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_small"
+        android:layout_marginEnd="@dimen/space_huge"
+        android:background="@drawable/left"
+        android:padding="@dimen/space_medium"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_chat_bubble_image_card"
+        app:layout_constraintTop_toTopOf="@id/left_chat_bubble_image_card"
+        tools:text="Dette er en testmelding på chat" />
+
+    <TextView
+        android:id="@+id/left_chat_bubble_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_medium"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/left_chat_bubble_message_text"
+        app:layout_constraintTop_toBottomOf="@id/left_chat_bubble_message_text"
+        tools:text="12:53 01.01.21" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
